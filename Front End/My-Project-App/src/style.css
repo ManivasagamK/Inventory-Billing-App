@@ -1,0 +1,367 @@
+
+.sidebar{
+    height: 100%;
+    width:auto;
+    display: flex;
+    
+    flex-wrap: wrap;
+    background: linear-gradient(200deg,blue,white,skyblue);
+    border-right: 3px solid rgb(249, 46, 181);
+  }
+  @media only screen and (max-width: 600px) {.sidebar{
+    width:200px
+  }}
+  .sidebarList{
+  height:auto;
+  width: 100%;
+  padding: 0;
+  
+  }
+  
+  .sidebarList .row{
+  width:100%;
+  height: 60px;
+  
+  list-style-type: none;
+  margin: 0%;
+  display: flex;
+  flex-direction: row;
+  justify-content:center ;
+  align-items: center;
+  font-size: large;
+  }
+  .sidebarList .row:hover{
+    background-color: rgb(255, 25, 240);
+    
+    color: black;
+    
+    transition:  0.5s ease;
+    cursor:pointer;
+  }
+  .sidebarList #active{
+    background-color: rgb(170, 168, 230);
+  }
+  .row #icon{
+    flex:30%;
+    font-size: large;
+   display: grid;
+   place-items: center;
+  }
+  .row #title{
+    flex:70%;
+    flex-wrap: wrap;
+  }
+  .login-layout{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    height: 75vh;
+   background: linear-gradient(blue,white,skyblue);
+    flex-direction: row;
+    border: #ffffff px solid;
+    border-radius: 10px;
+  }
+  .Login-form{
+    background-color: white;
+    border-radius:10px;
+    padding: 20px;
+    
+  }
+  .login{
+    width:100px;
+    background: linear-gradient(skyblue,white);
+    color: black !important;
+    font-weight: bold;
+  }
+
+  /* viewstock */
+  .viewstock{
+background: linear-gradient(45deg blue skyblue)!important;
+overflow: scroll;
+scroll-behavior: smooth;
+
+  }
+  .title{
+    display: flex;
+   
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    text-shadow: 2px 5px 5px blue;
+  }
+ 
+  
+  .form-label{
+    font-weight:bolder;
+    font-size: 20px;
+    color: black;
+  }
+  .imgdiv {
+    display:flex;
+    flex-wrap: wrap;
+   
+    justify-content: center;
+    align-items: center;
+  margin:15px;
+  border-radius: 25px;
+  }
+ 
+  .imgdiv >img{
+    display:flex;
+    flex-wrap: wrap;
+   
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 3px 3px 5px 3px grey;
+    
+  }
+  @media only screen and (max-width: 600px) {.imgdiv >img{
+    overflow: scroll;
+   
+  }}
+  .dashtab{
+    width: 100%;
+    height:100%;
+    margin:15px;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .sales{
+    width:250px;
+    margin:15px;
+    height:150px;
+    background-color: rgb(159, 226, 43);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 3px grey;
+    
+  }
+  .sales >div{
+    padding-top: 25px;
+     margin-top: 40px;
+    
+    
+   }
+  
+  .orders{
+    width:250px;
+    margin:15px;
+    height:150px;
+    background-color: rgb(245, 21, 21);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 3px grey;
+    
+  }
+  .orders >div{
+   padding-top: 25px;
+    margin-top: 40px;
+   
+   
+  }
+  .stocks{
+    width:250px;
+    margin:15px;
+    height:150px;
+    background-color: rgb(8, 126, 158);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 3px grey;
+  }
+  .stocks >div{
+    padding-top: 25px;
+     margin-top: 40px;
+    
+    
+   }
+  .totalvalue{
+    width:250px;
+    margin:15px;
+    height:150px;
+    background-color: rgb(234, 16, 183);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px 3px grey;
+  }
+  .totalvalue >div{
+    padding-top: 25px;
+     margin-top: 40px;
+    
+    
+   }
+  .additem{
+    width: 100%;
+    height: 5rem;
+    background: #f3ecec;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-shadow: 2px 5px 5px blue;
+  }
+  .addbutton{
+    display: flex;
+    justify-content: center;
+   align-items: center;
+   margin-top: 30px;
+  }
+  .inputcontainer{
+    display: flex;
+    flex-wrap: wrap;
+    height:200px;
+    
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    
+  }
+  .inputcontainer >div {
+    width: 100px;
+  }
+  .inputcontainer >div >label{
+font-size: medium;
+font-weight:bold;
+
+  }
+  .submitbill{
+    display :flex;
+   align-items: center;
+   justify-content: center;
+  }
+  .totalamount{
+    width: 200px !important;;
+    border:10px solid magenta;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .totalamount >input>label{
+    text-align: center;
+    font-size: 3rem;
+    font-weight: bolder;
+  }
+  .addcontainer{
+    width:100%;
+    height: fit-content;
+   
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  @media only screen and (max-width: 600px) {.addcontainer{
+    width:400px
+  }}
+ 
+
+
+  /* login pages */
+  
+  
+  .error_msg {
+    width: 500px;
+    padding: 15px;
+    margin: 5px 0;
+    font-size: 14px;
+    background-color: #f34646;
+    color: white;
+    border-radius: 5px;
+
+    text-align: center;
+  }
+  
+  .register{
+    width:500px;
+    text-decoration: none;
+   
+  }
+.logoutButton{
+  margin-right: 30px;
+  height:50px;
+  font-weight: bolder;
+  font-size: medium;
+  border-radius: 20px;
+}
+
+  .navbar {
+    width: 100%;
+    height: 70px;
+    background:#e62ee0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .navbar h1 {
+    color: white;
+    font-size: 25px;
+    margin-left: 20px;
+  }
+  
+  .white_btn {
+    border: none;
+    outline: none;
+    padding: 12px 0;
+    background-color: white;
+    border-radius: 20px;
+    width: 120px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  .home{
+    
+      background:#d6eef8;
+      display: grid;
+        grid-template-columns: 20% 80%;
+        height: 100vh;
+     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    }
+  .counter{
+    width: "60px";
+     border-radius: "30px"
+  }
+  .buttondownload{
+    background: linear-gradient(200deg,blue,pink,skyblue)!important;
+    color: black;
+  }
+  .brand{
+    width:200px;
+    height:100px;
+    background: linear-gradient(white,magenta,rgb(64, 75, 194));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    flex-wrap: wrap;
+    font-size: 24px;
+  }
+  .brandcontainer{
+display: flex;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+width:600px;
+
+  }

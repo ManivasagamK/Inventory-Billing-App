@@ -1,4 +1,4 @@
-import "./App.css";
+import "./style.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import LoginPage from "./Components/LoginPage";
 import Menu from "./Components/Menu";
