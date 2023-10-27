@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import ClientModel from '../Model/ClientModel';
+import ClientModel from '../Model/ClientModel.js';
 
 export const getClient = async (req, res) => {
     const { id } = req.params;

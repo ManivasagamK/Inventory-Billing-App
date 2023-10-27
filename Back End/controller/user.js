@@ -3,16 +3,19 @@ import nodemailer from 'nodemailer';
 import crypto from 'crypto';
 import bcrypt from 'bcrypt';
 import dotenv from 'dotenv';
+import User from '../Model/UserModel.js';
+import ProfileModel from '../Model/ProfileModel.js';
 
+//configuring dotenv files
 dotenv.config();
+
+//declaring variables from dotenv  to variable
 const SECRETKEY = process.env.SECRETKEY;
 const PORT = process.env.SMTP_PORT;
 const USER = process.env.SMTP_USER;
 const PASS = process.env.SMTP_PASS;
 
-import User from '../Model/UserModel.js';
-import ProfileModel from '../Model/ProfileModel.js';
-
+//User signin process
 export const signin = async (req, res) => {
   const { email, password } = req.body; //Coming from formData
 
@@ -49,6 +52,7 @@ export const signin = async (req, res) => {
   }
 };
 
+//User Registeration process
 export const signup = async (req, res) => {
   const { email, password, confirmPassword, firstName, lastName, bio } =
     req.body;
@@ -94,7 +98,7 @@ export const signup = async (req, res) => {
 //     const updatedUser = await User.findByIdAndUpdate(_id, formData, {new: true})
 //     res.json(updatedUser)
 // }
-
+//User Forget password process
 export const forgotPassword = (req, res) => {
   const { email } = req.body;
 

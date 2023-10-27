@@ -5,7 +5,13 @@ import pdf from 'html-pdf';
 import nodemailer from 'nodemailer';
 import { fileURLToPath } from 'url';
 import { dirname } from 'path';
-
+import connect from './db/dbConnection.js';
+import userRoutes from './routes/userRoutes.js';
+import invoiceRoutes from './routes/invoices.js';
+import clientRoutes from './routes/clients.js';
+import profile from './routes/profile.js';
+import pdfTemplate from './documents/index.js';
+import emailTemplate from './documents/email.js';
 
 
 const __filename = fileURLToPath(import.meta.url);
@@ -24,6 +30,15 @@ app.listen(PORT, () => {
 
 //dotenv file setup(environment variables)
 dotenv.config();
+
+// middlewares
+
+app.use(express.json({ limit: '30mb', extended: true }));
+
+app.use('/invoices', invoiceRoutes);
+app.use('/clients', clientRoutes);
+app.use('/users', userRoutes);
+app.use('/profiles', profile);
 
 //Send invoice through nodemailer transport
 
