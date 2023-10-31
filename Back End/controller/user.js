@@ -61,7 +61,7 @@ export const signup = async (req, res) => {
   try {
     const existingUser = await User.findOne({ email:email });
     const userProfile = await ProfileModel.findOne({
-      userId: existingUser?._id,
+    userId: existingUser?._id,
     });
 
     if (existingUser)
