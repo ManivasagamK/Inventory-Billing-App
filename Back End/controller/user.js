@@ -20,11 +20,12 @@ export const signin = async (req, res) => {
   const { email, password } = req.body; //Coming from formData
 
   try {
-    const existingUser = await User.findOne({ email });
-
+    const existingUser = await User.findOne({ email:email });
+    console.log(existingUser);
     //get userprofile and append to login auth detail
     const userProfile = await ProfileModel.findOne({
       userId: existingUser?._id,
+      
     });
 
     if (!existingUser)
@@ -41,7 +42,7 @@ export const signin = async (req, res) => {
     //If crednetials are valid, create a token for the user
     const token = jwt.sign(
       { email: existingUser.email, id: existingUser._id },
-      SECRET,
+      SECRETKEY,
       { expiresIn: '1h' }
     );
 
@@ -58,7 +59,7 @@ export const signup = async (req, res) => {
     req.body;
 
   try {
-    const existingUser = await User.findOne({ email });
+    const existingUser = await User.findOne({ email:email });
     const userProfile = await ProfileModel.findOne({
       userId: existingUser?._id,
     });
