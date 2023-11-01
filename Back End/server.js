@@ -50,14 +50,12 @@ app.post('/send-pdf', async (req, res) => {
   try {
     const transporter = nodemailer.createTransport({
         service: "gmail",
-      port: process.env.SMTP_PORT,
+      // port: process.env.SMTP_PORT,
       auth: {
-        user: process.env.SMTP_USER,
-        pass: process.env.SMTP_PASS,
+        user: process.env.USER,
+        pass: process.env.PASS,
       },
-      tls: {
-        rejectUnauthorized: false,
-      },
+      
     });
 
     const mail = {
