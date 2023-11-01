@@ -3,7 +3,7 @@ import mongoose from 'mongoose';
 const ProfileSchema = mongoose.Schema({
   name: { type: String, required: true },
   email: { type: String, required: true, unique: true },
-  phoneNumber: { type: String, required: true },
+  phoneNumber: { type: String },
   businessName: String,
   contactAddress: String,
   paymentDetails: String,
