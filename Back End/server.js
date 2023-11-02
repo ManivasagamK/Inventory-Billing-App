@@ -46,14 +46,14 @@ var options = { format: 'A4' };
 //SEND PDF INVOICE VIA EMAIL
 app.post('/send-pdf', async (req, res) => {
   const { email, company } = req.body;
-
+// console.log(email,company);
   try {
     const transporter = nodemailer.createTransport({
         service: "gmail",
       // port: process.env.SMTP_PORT,
       auth: {
         user: process.env.USER,
-        pass: process.env.PASS,
+        pass: process.env.PASSWORD,
       },
       
     });

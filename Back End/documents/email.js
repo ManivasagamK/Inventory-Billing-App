@@ -1,4 +1,4 @@
-import moment from 'moment';
+import moment from "moment";
 
 export default function ({ dueDate, type, balanceDue, company, link, id }) {
   // const today = new Date();
@@ -123,22 +123,27 @@ hr {
               <div>
                   <p style="font-size: 18px">${
                     Number(balanceDue) <= 0
-                      ? 'Thank you for your business'
+                      ? `Thank you for your business with ${
+                          company.businessName
+                            ? company.businessName
+                            : company.name
+                        }`
+                      
                       : type
                   } ${
-    Number(balanceDue) != 0 ? 'for' : ''
+    Number(balanceDue) != 0 ? "for" : ""
   } <span style="font-weight: 700">${
-    Number(balanceDue) <= 0 ? '' : balanceDue
+    Number(balanceDue) <= 0 ? "" : balanceDue
   }</span> ${
-    Number(balanceDue) <= 0 ? '' : `due by`
+    Number(balanceDue) <= 0 ? "" : `due by`
   } <span style="font-weight: 700">${
-    Number(balanceDue) <= 0 ? '' : moment(dueDate).format('MMM Do YYYY')
+    Number(balanceDue) <= 0 ? "" : moment(dueDate).format("MMM Do YYYY")
   }</span></p>
               </div>
               
               <div class="link-container">
                   <a href=${link} class="invoice-link" style="color: white">
-                  ${Number(balanceDue) <= 0 ? 'View Receipt' : `View ${type}`}
+                  ${Number(balanceDue) <= 0 ? "View Receipt" : `View ${type}`}
                   </a>
               </div>
               
@@ -147,17 +152,18 @@ hr {
               <div class="address">
                   <h2>${company.businessName}</h2>
                   <p>${company.phoneNumber}</p>
-                  <p>${company.website ? company?.website : ''}</p>
+                  <p>${company.website ? company?.website : ""}</p>
                   
               </div>
+              <p style='font-weight:bold;font-size:14px;'>${`Kindly find the bill in attachments`}</p>
         </div>
         
       <div class"footer">
           <a href="https://invoicybilly.netlify.app">
-          <img class="footer-logo" src="https://i.postimg.cc/hGZKzdkS/logo.png" alt="arc-invoice"/>
+          <img class="footer-logo" src="https://i.postimg.cc/pTn6gNw6/MK-1.png" alt="arc-invoice"/>
         </a>
       </div>
-    <p style="text-align: center">Make beautiful invoice for free at https://invoicybilly.netlify.app </p>
+    <p style="text-align: center">Make beautiful invoice for your company free with https://invoicybilly.netlify.app </p>
     </div>
     </body>
 </html>`;

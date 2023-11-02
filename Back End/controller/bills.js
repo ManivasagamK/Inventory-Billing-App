@@ -31,7 +31,7 @@ export const getTotalCount = async (req, res) => {
 
 export const getInvoices = async (req, res) => {
   try {
-    const allInvoices = await InvoiceModel.find({}).sort({ _id: -1 });
+    const allInvoices = await BillModel.find({}).sort({ _id: -1 });
 
     res.status(200).json(allInvoices);
   } catch (error) {
@@ -56,7 +56,7 @@ export const getInvoice = async (req, res) => {
   const { id } = req.params;
 
   try {
-    const invoice = await InvoiceModel.findById(id);
+    const invoice = await BillModel.findById(id);
 
     res.status(200).json(invoice);
   } catch (error) {
@@ -71,7 +71,7 @@ export const updateInvoice = async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(_id))
     return res.status(404).send('No invoice with that id');
 
-  const updatedInvoice = await InvoiceModel.findByIdAndUpdate(
+  const updatedInvoice = await BillModel.findByIdAndUpdate(
     _id,
     { ...invoice, _id },
     { new: true }
@@ -86,7 +86,7 @@ export const deleteInvoice = async (req, res) => {
   if (!mongoose.Types.ObjectId.isValid(id))
     return res.status(404).send('No invoice with that id');
 
-  await InvoiceModel.findByIdAndRemove(id);
+  await BillModel.findByIdAndRemove(id);
 
   res.json({ message: 'Invoice deleted successfully' });
 };
