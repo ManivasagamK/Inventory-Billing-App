@@ -136,9 +136,9 @@ export const forgotPassword = (req, res) => {
             subject: "Password reset request",
             html: `
                     <p style="font-size:14px;">You requested for password reset from Mk Billings Invoicing application</p>
-                    <h3>Please click this <a href="http://localhost:5173/reset/${token}"><button style="background-color: #3498db; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;font-weight:bold;">Reset Password</button></a> to reset your password</h3>
+                    <h3>Please click this <a href="https://zesty-sundae-e7f459.netlify.app/reset/${token}"><button style="background-color: #3498db; color: #fff; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer;font-weight:bold;">Reset Password</button></a> to reset your password</h3>
                     <p style="font-size:14px;">Is it not working? Don't Worry, just copy and paste the following url in your browser.</p>
-                    <p style="font-size:14px;">http://localhost:5173/reset/${token}</p>
+                    <p style="font-size:14px;">https://zesty-sundae-e7f459.netlify.app/reset/${token}</p>
                     <p style="font-size:14px;">If this was a mistake, just ignore this email and nothing will happen.</p>
                     `,
           });
