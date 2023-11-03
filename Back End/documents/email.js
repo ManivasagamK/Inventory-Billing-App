@@ -159,11 +159,11 @@ hr {
         </div>
         
       <div class"footer">
-          <a href="https://invoicybilly.netlify.app">
+          <a href="https://zesty-sundae-e7f459.netlify.app">
           <img class="footer-logo" src="https://i.postimg.cc/pTn6gNw6/MK-1.png" alt="arc-invoice"/>
         </a>
       </div>
-    <p style="text-align: center">Make beautiful invoice for your company free with https://invoicybilly.netlify.app </p>
+    <p style="text-align: center">Make beautiful invoice for your company free with https://zesty-sundae-e7f459.netlify.app </p>
     </div>
     </body>
 </html>`;
