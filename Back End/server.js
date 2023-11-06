@@ -99,7 +99,7 @@ app.post('/create-pdf', (req, res) => {
         res.send(Promise.resolve());
       }
     });
-  });
+    });
   
   //SEND PDF INVOICE
   app.get('/fetch-pdf', (req, res) => {
